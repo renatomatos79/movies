@@ -61,6 +61,8 @@
     <Folder Include="mov\" />
     <Folder Include="mov\Tables\" />
     <Folder Include="Security\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="usr\Tables\Tokens.sql" />
@@ -69,5 +71,8 @@
     <Build Include="mov\Tables\Movies.sql" />
     <Build Include="Security\usr.sql" />
     <Build Include="Security\mov.sql" />
+    <Build Include="dbo\Tables\IMDB.sql" />
+    <Build Include="Security\movie.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
   </ItemGroup>
 </Project>

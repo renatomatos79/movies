@@ -4,6 +4,7 @@
     [MovieTypeID] INT           NOT NULL,
     [imdbID]      VARCHAR (40)  NOT NULL,
     [Poster]      VARCHAR (MAX) NOT NULL,
+    [Year]        INT           NOT NULL,
     [Active]      BIT           NOT NULL,
     [DtCreated]   DATETIME      NOT NULL,
     [CreatedBy]   INT           NOT NULL,
@@ -15,4 +16,6 @@
     CONSTRAINT [FK_Movies_Users1] FOREIGN KEY ([ModifiedBy]) REFERENCES [usr].[Users] ([ID]),
     CONSTRAINT [IX_Movies] UNIQUE NONCLUSTERED ([imdbID] ASC)
 );
+
+
 

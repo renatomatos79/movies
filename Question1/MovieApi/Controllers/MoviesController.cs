@@ -42,6 +42,7 @@ namespace Movie.Api.Controllers
                 result.Total = rows.Count();
                 result.TotalPages = (result.Total / result.PerPage) + (result.Total % result.PerPage == 0 ? 0 : 1);
                 result.Data = rows.Skip(skip).Take(result.PerPage).ToList().Select(s => MovieResponse.FromModel(s)).ToList();
+                result.Success = true;
 
                 return Ok(result);
             }
