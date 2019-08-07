@@ -7,6 +7,6 @@ namespace Movie.Service.Contracts
 {
     public interface IMoviesRepository : IBaseRepository<Domain.Models.Movies, int>
     {
-        
+        Task<IEnumerable<Domain.Models.Movies>> Search(string title);
     }
 }

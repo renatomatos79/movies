@@ -13,5 +13,10 @@ namespace Movie.Service.Repositories
     public class UsersRepository : BaseRepository<Domain.Models.Users, int>, IUsersRepository
     {
         public UsersRepository(MovieDbContext context) : base(context) { }
+
+        public async Task<Domain.Models.Users> FindByLogin(string login)
+        {
+            return await context.Users.FirstOrDefaultAsync(a => a.Login == login);
+        }
     }
 }

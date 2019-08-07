@@ -10,6 +10,7 @@ namespace Movie.Domain.Models
         public int MovieTypeId { get; set; }
         public string ImdbId { get; set; }
         public string Poster { get; set; }
+        public int Year { get; set; }
         public bool Active { get; set; }
         public DateTime DtCreated { get; set; }
         public int CreatedBy { get; set; }

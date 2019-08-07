@@ -7,6 +7,6 @@ namespace Movie.Service.Contracts
 {
     public interface IUsersRepository : IBaseRepository<Domain.Models.Users, int>
     {
-        
+        Task<Domain.Models.Users> FindByLogin(string login);
     }
 }

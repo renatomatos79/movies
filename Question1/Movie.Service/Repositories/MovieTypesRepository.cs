@@ -13,5 +13,11 @@ namespace Movie.Service.Repositories
     public class MovieTypesRepository : BaseRepository<Domain.Models.MovieTypes, int>, IMovieTypesRepository
     {
         public MovieTypesRepository(MovieDbContext context) : base(context) { }
+
+        public async Task<Domain.Models.MovieTypes> FindByName(string name)
+        {
+            return await context.MovieTypes.FirstOrDefaultAsync(a => a.Name == name);
+        }
+
     }
 }
